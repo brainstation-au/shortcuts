@@ -11,7 +11,7 @@ which composer &> /dev/null
 if [[ $? == 1 ]]; then :
   # If exit status is 1, go and install below.
 else
-  echo "Docker already exists."
+  echo "Composer already exists."
   return
 fi
 
