@@ -1,5 +1,18 @@
 #!/bin/bash
 
+# Check if already installed.
+which composer &> /dev/null
+if [ $? == 0 ]; then
+  echo "Composer already exists."
+  return
+fi
+
+# Stop the execution of a script if a command or pipeline has an error.
+set -e
+
+# Print all executed commands to the terminal.
+set -x
+
 # https://getcomposer.org/doc/faqs/how-to-install-composer-programmatically.md
 
 EXPECTED_SIGNATURE=$(wget -q -O - https://composer.github.io/installer.sig)
