@@ -5,9 +5,8 @@ export DEBIAN_FRONTEND=noninteractive
 
 # Check if docker is already installed.
 which docker &> /dev/null
-if [[ $? == 1 ]]; then :
-  # If exit status is 1, go and install docker below.
-else
+if [ $? == 0 ]
+then
   echo "Docker already exists."
   return
 fi
@@ -44,14 +43,16 @@ apt-get update > /dev/null
 # Install the latest version of Docker
 apt-get install docker-ce --assume-yes
 
-# Uninstall docker.
-# sudo apt-get purge docker-ce
-
 # Add the docker group if it doesn't already exist.
 getent group docker || groupadd docker
 
-# Add the default vagrant user to the docker group.
-gpasswd -a $USER docker
+# Add the user to the docker group.
+if [ -z $1 ]
+then
+  gpasswd -a $USER docker
+else
+  gpasswd -a $1 docker
+fi
 
 # Restart the Docker daemon.
 service docker restart
