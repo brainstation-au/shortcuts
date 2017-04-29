@@ -15,6 +15,15 @@ else
   return
 fi
 
+# Check if wget is already installed.
+which wget &> /dev/null
+if [ $? == 1 ]; then
+  # Update package information.
+  apt-get update > /dev/null
+  # Install wget.
+  apt-get install wget
+fi
+
 # https://getcomposer.org/doc/faqs/how-to-install-composer-programmatically.md
 
 EXPECTED_SIGNATURE=$(wget -q -O - https://composer.github.io/installer.sig)
