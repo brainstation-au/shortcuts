@@ -3,12 +3,12 @@
 # Stop the execution of a script if a command or pipeline has an error.
 set -e
 
-# Print all executed commands to the terminal
+# Print all executed commands to the terminal.
 set -x
 
 # Check if already installed.
 which composer &> /dev/null
-if [[ $? == 1 ]]; then :
+if [ $? == 1 ]; then
   # If exit status is 1, go and install below.
 else
   echo "Composer already exists."
