@@ -1,5 +1,15 @@
 #!/bin/bash
 
+if [ -z "$1" ] && [ "$1" == "global" ]
+then
+  DEST="/usr/local/bin"
+else
+  DEST="~/bin"
+fi
+
+# Create the folder if not exists.
+mkdir -p ${DEST}
+
 # https://getcomposer.org/doc/faqs/how-to-install-composer-programmatically.md
 
 EXPECTED_SIGNATURE=$(wget -q -O - https://composer.github.io/installer.sig)
@@ -13,7 +23,7 @@ then
     exit 1
 fi
 
-php composer-setup.php --quiet --install-dir=/usr/local/bin --filename=composer
+php composer-setup.php --quiet --install-dir=${DEST} --filename=composer
 RESULT=$?
 rm composer-setup.php
 exit $RESULT
