@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ -z "$1" ] && [ "$1" == "global" ]
+if [ "$1" == "global" ]
 then
   DEST="/usr/local/bin"
 else
