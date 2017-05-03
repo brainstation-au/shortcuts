@@ -40,7 +40,7 @@ else
   apt-get update > /dev/null
 
   # Install the latest version of Docker
-  apt-get install docker-ce --assume-yes
+  apt-get install docker-ce -y
 fi
 
 # Add the docker group if it doesn't already exist.
