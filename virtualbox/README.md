@@ -7,5 +7,9 @@
   ```
 - Check VirtualBox [website](https://www.virtualbox.org/wiki/Linux_Downloads) for latest version number and replace `{version_number}` in the following and execute.
   ```
-  curl -sS https://raw.githubusercontent.com/brainstation-au/shortcuts/master/virtualbox/install-ubuntu.sh | bash /dev/stdin {version_number}
+  $ curl -sS https://raw.githubusercontent.com/brainstation-au/shortcuts/master/virtualbox/install-ubuntu.sh | bash /dev/stdin {version_number}
+  ```
+- You can now get out of the `sudo` mode.
+  ```
+  $ logout
   ```
