@@ -3,7 +3,7 @@
 ## Installation:
 - This script was written with this assumption that your terminal already has `sudo` permission. If that's not the case for you, go to `sudo` mode.
   ```
-  $ sudo -i
+  $ sudo su
   ```
 - Check VirtualBox [website](https://www.virtualbox.org/wiki/Linux_Downloads) for latest version number and replace `{version_number}` in the following and execute.
   ```
@@ -11,5 +11,5 @@
   ```
 - You can now get out of the `sudo` mode.
   ```
-  $ logout
+  $ exit
   ```
