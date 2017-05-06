@@ -14,5 +14,5 @@
 databases and users.
 - Run following to import all the databases:
   ```
-  $ curl -sS ...
+  $ curl -sS https://raw.githubusercontent.com/brainstation-au/shortcuts/master/mysql/import/multiple.sh | bash /dev/stdin {ROOT_USER} {ROOT_PASS}
   ```
