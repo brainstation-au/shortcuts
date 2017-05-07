@@ -7,11 +7,11 @@
   ```
 - Check VirtualBox [website](https://www.virtualbox.org/wiki/Linux_Downloads) for latest version number and replace `{version_number}` (e.g. `5.1`) in the following and execute.
   ```
-  $ curl -sS https://goo.gl/WjI361 | bash /dev/stdin {version_number}
+  $ curl -sSL https://goo.gl/WjI361 | bash /dev/stdin {version_number}
   ```
 - (Alternatively) this script installs version `5.1`. If you are happy with that:
   ```
-  $ curl -sS https://goo.gl/WjI361 | bash
+  $ curl -sSL https://goo.gl/WjI361 | bash
   ```
 - You can now get out of the `sudo` mode.
   ```

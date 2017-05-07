@@ -9,10 +9,10 @@
 
 ### Install locally
 ```
-curl -sS https://goo.gl/5wmfUy | bash
+curl -sSL https://goo.gl/5wmfUy | bash
 ```
 
 ### Install globally
 ```
-curl -sS https://goo.gl/5wmfUy | bash /dev/stdin global
+curl -sSL https://goo.gl/5wmfUy | bash /dev/stdin global
 ```
