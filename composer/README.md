@@ -9,10 +9,10 @@
 
 ### Install locally
 ```
-curl -sS https://raw.githubusercontent.com/brainstation-au/shortcuts/master/composer/install.sh | bash
+curl -sS https://goo.gl/5wmfUy | bash
 ```
 
 ### Install globally
 ```
-curl -sS https://raw.githubusercontent.com/brainstation-au/shortcuts/master/composer/install.sh | bash /dev/stdin global
+curl -sS https://goo.gl/5wmfUy | bash /dev/stdin global
 ```
